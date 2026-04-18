@@ -1,213 +1,142 @@
-<div class="page-shell">
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-grid"></div>
-
-  <header class="site-header" [class.scrolled]="isScrolled">
+<div class="page">
+  <header class="header" [class.header-scrolled]="isScrolled">
     <div class="container header-inner">
-      <a href="#" class="brand">
-        <div class="brand-mark-wrap">
-          <div class="brand-mark">K</div>
-          <div class="brand-glow"></div>
-        </div>
-
-        <div class="brand-copy">
+      <div class="logo">
+        <div class="logo-mark">K</div>
+        <div class="logo-text">
           <h1>Kỹ Năng Sống Kids</h1>
           <p>Premium Life Skills Program for Primary Students</p>
         </div>
-      </a>
+      </div>
 
-      <nav class="main-nav">
+      <nav class="nav">
         <a href="#gioi-thieu">Giới thiệu</a>
-
-        <div class="nav-dropdown">
-          <button class="nav-trigger" type="button">
-            <span>Chương trình</span>
-            <span class="chevron">▾</span>
-          </button>
-
-          <div class="mega-menu">
-            <div class="mega-left">
-              <span class="mega-kicker">Learning Journey</span>
-              <h3>Lộ trình phát triển theo từng khối lớp</h3>
-              <p>
-                Chọn khối lớp để xem nội dung đào tạo phù hợp với độ tuổi, hành vi,
-                cảm xúc và năng lực ứng xử của trẻ trong xã hội hiện đại.
-              </p>
-
-              <div class="mega-highlight">
-                <strong>Thiết kế theo độ tuổi</strong>
-                <span>Tự lập · giao tiếp · cảm xúc · an toàn · trách nhiệm</span>
-              </div>
-            </div>
-
-            <div class="mega-right">
-              <a
-                *ngFor="let item of navGrades; trackBy: trackByGrade; let i = index"
-                class="mega-item"
-                href="#chuong-trinh"
-                (click)="selectGrade(item.key)"
-              >
-                <span class="mega-number">{{ i + 1 }}</span>
-                <span class="mega-text">
-                  <strong>{{ item.name }}</strong>
-                  <small>{{ item.desc }}</small>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-
+        <a href="#chuong-trinh">Chương trình</a>
         <a href="#phuong-phap">Phương pháp</a>
         <a href="#hoc-phi">Học phí</a>
         <a href="#form-dang-ky">Liên hệ</a>
       </nav>
 
-      <div class="header-actions">
-        <a href="#chuong-trinh" class="header-link">Xem lộ trình</a>
-        <a href="#form-dang-ky" class="header-cta">Đăng ký tư vấn</a>
-      </div>
+      <a href="#form-dang-ky" class="header-cta">Đăng ký tư vấn</a>
     </div>
   </header>
 
   <main>
-    <section class="hero-section">
+    <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Premium Life Skills Program</span>
-
-          <h2 class="hero-title">
+        <div class="hero-left">
+          <span class="badge">Premium Life Skills Program</span>
+          <h2>
             Giúp con phát triển
             <span>kỹ năng sống</span>,
             <span>thái độ tích cực</span>
             và phong thái tự tin từ sớm
           </h2>
-
-          <p class="hero-desc">
+          <p>
             Chương trình dành cho học sinh từ Lớp 1 đến Lớp 5, giúp trẻ hình thành
             hành vi tích cực, giao tiếp đúng mực, làm chủ cảm xúc, biết tự lập,
             biết bảo vệ bản thân và chủ động hơn trong học tập lẫn cuộc sống.
           </p>
 
-          <div class="hero-actions-main">
+          <div class="hero-actions">
             <a href="#chuong-trinh" class="btn btn-primary">Xem chương trình học</a>
             <a href="#form-dang-ky" class="btn btn-secondary">Nhận tư vấn miễn phí</a>
           </div>
-
-          <div class="hero-metrics">
-            <div class="metric-card">
-              <strong>05</strong>
-              <span>Khối lớp đào tạo</span>
-            </div>
-            <div class="metric-card">
-              <strong>100+</strong>
-              <span>Chủ đề kỹ năng sống</span>
-            </div>
-            <div class="metric-card">
-              <strong>360°</strong>
-              <span>Phát triển kỹ năng và thái độ</span>
-            </div>
-          </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="hero-main-image glass-card">
-            <img src="/images/hero-kids.jpg" alt="Trẻ em học kỹ năng sống" />
-            <div class="floating-info">
-              <span>Nuôi dưỡng nền tảng</span>
-              <strong>Tự tin · tự lập · cư xử đẹp</strong>
-            </div>
-          </div>
+       <div class="hero-right">
+  <div class="hero-main-wrap">
+    <img src="/images/hero-kids.jpg" alt="Hero kids" class="hero-main-image" />
 
-          <div class="hero-side">
-            <div class="hero-small-image glass-card">
-              <img src="/images/class-activity.jpg" alt="Hoạt động lớp học" />
-            </div>
+    <div class="floating-info">
+      <span class="floating-label">Phát triển mỗi ngày</span>
+      <strong class="floating-title">Tự tin · tự lập · ứng xử đẹp</strong>
+    </div>
+  </div>
 
-            <div class="hero-result-card glass-card">
-              <img src="/images/kid-after-course.jpg" alt="Học sinh tự tin sau khóa học" />
-              <div class="result-badge">
-                <span>Hình mẫu sau khóa học</span>
-                <strong>Tử tế · tự tin · lễ phép</strong>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="hero-side-images">
+    <img src="/images/class-activity.jpg" alt="Class activity" />
+    <img src="/images/kid-after-course.jpg" alt="Kid after course" />
+  </div>
+</div>
       </div>
     </section>
 
     <section id="gioi-thieu" class="section">
       <div class="container">
-        <div class="section-heading center narrow">
-          <span class="section-tag">Why it matters</span>
+        <div class="section-head center">
+          <span class="badge">Why it matters</span>
           <h2>Kỹ năng sống là nền tảng để trẻ học tốt, sống tốt và trưởng thành tích cực</h2>
           <p>
             Trẻ em không chỉ cần kiến thức học thuật mà còn cần được rèn luyện khả năng giao tiếp,
-            làm chủ cảm xúc, tự bảo vệ bản thân, biết hợp tác và sống có trách nhiệm trong gia đình,
-            nhà trường và xã hội.
+            làm chủ cảm xúc, tự bảo vệ bản thân, biết hợp tác và sống có trách nhiệm.
           </p>
         </div>
 
         <div class="feature-grid">
-          <article
-            *ngFor="let item of features; trackBy: trackByIndex"
-            class="feature-card"
-          >
-            <div class="feature-icon">{{ item.icon }}</div>
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.desc }}</p>
-          </article>
+          <div class="feature-card">
+            <div class="icon">✨</div>
+            <h3>Tự tin & tự lập</h3>
+            <p>Trẻ biết chủ động hơn trong sinh hoạt, học tập và những việc phù hợp với lứa tuổi.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">💬</div>
+            <h3>Giao tiếp tích cực</h3>
+            <p>Biết lắng nghe, chia sẻ, tôn trọng người khác và giao tiếp lễ phép trong nhiều tình huống.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">🧠</div>
+            <h3>Làm chủ cảm xúc</h3>
+            <p>Nhận diện cảm xúc, điều chỉnh phản ứng và bình tĩnh hơn trước áp lực hay mâu thuẫn.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">🛡️</div>
+            <h3>An toàn & trách nhiệm</h3>
+            <p>Biết bảo vệ bản thân, phân biệt đúng sai và từng bước xây dựng lối sống có trách nhiệm.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="chuong-trinh" class="section section-soft">
       <div class="container">
-        <div class="program-heading-wrap">
-          <div class="program-heading-card">
-            <span class="program-kicker">Learning Journey</span>
-            <h2>Lộ trình đào tạo từ Lớp 1 đến Lớp 5</h2>
-            <p>
-              Nội dung được thiết kế chuyên sâu theo từng độ tuổi, tập trung vào kỹ năng,
-              thái độ, giá trị sống và năng lực ứng xử cần thiết trong xã hội hiện đại.
-            </p>
-          </div>
+        <div class="section-head">
+          <span class="badge">Learning Journey</span>
+          <h2>Lộ trình đào tạo từ Lớp 1 đến Lớp 5</h2>
+          <p>Nội dung được thiết kế theo từng độ tuổi, tập trung vào kỹ năng, thái độ và giá trị sống.</p>
         </div>
 
-        <div class="program-shell">
-          <aside class="grade-tabs">
+        <div class="program-layout">
+          <div class="program-tabs">
             <button
-              *ngFor="let item of navGrades; trackBy: trackByGrade"
-              [class.active]="activeGrade === item.key"
+              *ngFor="let item of programs"
               (click)="selectGrade(item.key)"
+              [class.active]="activeGrade === item.key"
+              class="grade-tab-btn"
             >
               <span>{{ item.name }}</span>
-              <small>{{ item.short }}</small>
             </button>
-          </aside>
+          </div>
 
-          <div class="program-panel">
-            <div class="program-head">
-              <div>
-                <span class="program-label">{{ currentProgram.label }}</span>
-                <h3>{{ currentProgram.title }}</h3>
-                <p>{{ currentProgram.desc }}</p>
-              </div>
+          <div class="program-content">
+            <span class="badge">{{ currentProgram.name }}</span>
+            <h3>{{ currentProgram.title }}</h3>
+            <p class="program-desc">{{ currentProgram.description }}</p>
 
-              <div class="focus-card">
-                <span>Trọng tâm</span>
-                <strong>{{ currentProgram.focus }}</strong>
+            <div class="topic-grid">
+              <div class="topic-card" *ngFor="let topic of getVisibleTopics(currentProgram); let i = index">
+                <span class="topic-number">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+                <p>{{ topic }}</p>
               </div>
             </div>
 
-            <div class="topic-grid">
-              <div
-                *ngFor="let topic of currentProgram.topics; trackBy: trackByIndex; let i = index"
-                class="topic-card"
-              >
-                <span>{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
-                <p>{{ topic }}</p>
-              </div>
+            <div class="program-more" *ngIf="currentProgram.topics.length > 5">
+              <button class="btn btn-secondary" (click)="toggleProgram(currentProgram.key)">
+                {{ isExpanded(currentProgram.key) ? 'Thu gọn' : 'Xem thêm' }}
+              </button>
             </div>
           </div>
         </div>
@@ -215,208 +144,148 @@
     </section>
 
     <section id="phuong-phap" class="section">
-      <div class="container">
-        <div class="method-shell">
-          <div class="method-copy">
-            <span class="section-tag">Teaching Method</span>
+      <div class="container method-grid">
+        <div>
+          <div class="section-head">
+            <span class="badge">Teaching Method</span>
             <h2>Học qua trải nghiệm thật để tạo nên thay đổi thật</h2>
             <p>
               Mỗi bài học được thiết kế để trẻ quan sát, suy nghĩ, phản hồi và thực hành,
-              từ đó dần hình thành kỹ năng thành thói quen tích cực trong đời sống hằng ngày.
+              từ đó hình thành kỹ năng thành thói quen tích cực.
             </p>
+          </div>
 
-            <div class="method-list">
-              <div
-                *ngFor="let item of methods; trackBy: trackByIndex"
-                class="method-item"
-              >
-                <strong>{{ item.title }}</strong>
-                <span>{{ item.desc }}</span>
-              </div>
+          <div class="method-list">
+            <div class="method-item">
+              <strong>Tình huống thực tế</strong>
+              <span>Gắn nội dung học với gia đình, trường lớp, bạn bè và các tình huống đời sống.</span>
+            </div>
+            <div class="method-item">
+              <strong>Thực hành liên tục</strong>
+              <span>Trẻ được luyện tập thường xuyên để dần chuyển hóa kỹ năng thành hành vi tốt.</span>
+            </div>
+            <div class="method-item">
+              <strong>Biểu đạt và phản hồi</strong>
+              <span>Khuyến khích trẻ nói lên suy nghĩ, cảm xúc và quan điểm cá nhân.</span>
+            </div>
+            <div class="method-item">
+              <strong>Đồng hành cùng phụ huynh</strong>
+              <span>Tăng hiệu quả khi gia đình cùng duy trì và khích lệ trẻ mỗi ngày.</span>
             </div>
           </div>
+        </div>
 
-          <div class="method-image glass-card">
-            <img src="/images/parent-child.jpg" alt="Phụ huynh đồng hành cùng con" />
-          </div>
+        <div class="method-image">
+          <img src="/images/parent-child.jpg" alt="Parent child" />
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-heading center">
-          <span class="section-tag">Testimonials</span>
-          <h2>Những thay đổi tích cực mà phụ huynh dễ dàng cảm nhận</h2>
-          <p>
-            Chương trình không chỉ giúp trẻ học kỹ năng mà còn tạo ra những thay đổi rõ rệt
-            trong cách ứng xử, sự tự tin và tinh thần trách nhiệm mỗi ngày.
-          </p>
+        <div class="section-head center">
+          <span class="badge">Testimonials</span>
+          <h2>Phản hồi từ phụ huynh</h2>
         </div>
 
         <div class="testimonial-grid">
-          <article
-            *ngFor="let item of testimonials; trackBy: trackByIndex"
-            class="testimonial-card"
-            [class.featured]="item.featured"
-          >
-            <div class="testimonial-top">
-              <div class="avatar-badge">{{ item.initials }}</div>
-              <div>
-                <strong>{{ item.name }}</strong>
-                <span>{{ item.grade }}</span>
-              </div>
-            </div>
-            <p>“{{ item.quote }}”</p>
-          </article>
+          <div class="testimonial-card featured">
+            <strong>Phụ huynh bé Minh Anh · Lớp 2</strong>
+            <p>
+              “Sau một thời gian học, con biết tự chuẩn bị đồ đi học, nói chuyện lễ phép hơn
+              và biết chia sẻ với người thân nhiều hơn trước.”
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <strong>Phụ huynh bé Gia Huy · Lớp 4</strong>
+            <p>
+              “Con tự tin hơn khi trình bày suy nghĩ, biết bình tĩnh hơn khi có mâu thuẫn
+              và không còn phản ứng nóng như trước.”
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <strong>Phụ huynh bé Khánh Linh · Lớp 5</strong>
+            <p>
+              “Khóa học giúp con biết quản lý thời gian, chủ động học tập hơn và có nhận thức tốt hơn
+              khi sử dụng internet.”
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="hoc-phi" class="section section-soft">
       <div class="container">
-        <div class="section-heading center">
-          <span class="section-tag">Pricing</span>
-          <h2>Lựa chọn chương trình phù hợp với nhu cầu phát triển của con</h2>
+        <div class="section-head center">
+          <span class="badge">Pricing</span>
+          <h2>Lựa chọn chương trình phù hợp</h2>
         </div>
 
         <div class="pricing-grid">
-          <article
-            *ngFor="let plan of pricingPlans; trackBy: trackByPlan"
-            class="pricing-card"
-            [class.featured-price]="plan.featured"
-          >
-            <div *ngIf="plan.featured" class="featured-tag">Phổ biến nhất</div>
-            <h3>{{ plan.name }}</h3>
-            <div class="price">{{ plan.price }}</div>
+          <div class="pricing-card">
+            <h3>Gói Cơ Bản</h3>
+            <div class="price">499.000đ</div>
             <ul>
-              <li *ngFor="let feature of plan.features; trackBy: trackByIndex">
-                {{ feature }}
-              </li>
+              <li>Học theo khối lớp</li>
+              <li>Tài liệu cơ bản</li>
+              <li>Nội dung nền tảng</li>
+              <li>Phù hợp để bắt đầu</li>
             </ul>
-            <a
-              href="#form-dang-ky"
-              class="btn full-btn"
-              [class.btn-primary]="plan.featured"
-              [class.btn-secondary]="!plan.featured"
-            >
-              {{ plan.cta }}
-            </a>
-          </article>
+          </div>
+
+          <div class="pricing-card featured">
+            <h3>Gói Nâng Cao</h3>
+            <div class="price">899.000đ</div>
+            <ul>
+              <li>Toàn bộ nội dung theo khối lớp</li>
+              <li>Bài tập ứng dụng thực tế</li>
+              <li>Định hướng phụ huynh đồng hành</li>
+              <li>Phù hợp phát triển toàn diện</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <h3>Gói Toàn Diện</h3>
+            <div class="price">1.490.000đ</div>
+            <ul>
+              <li>Trọn bộ chương trình</li>
+              <li>Tài liệu mở rộng</li>
+              <li>Định hướng kỹ năng lâu dài</li>
+              <li>Ưu tiên tư vấn riêng</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container faq-form-grid">
-        <div class="faq-shell">
-          <div class="section-heading">
-            <span class="section-tag">FAQ</span>
-            <h2>Phụ huynh thường quan tâm điều gì trước khi đăng ký?</h2>
-            <p>
-              Một vài câu hỏi phổ biến để bạn hiểu rõ hơn về chương trình và chọn đúng lộ trình phù hợp cho con.
-            </p>
-          </div>
-
-          <div class="faq-list">
-            <div
-              *ngFor="let item of faqs; trackBy: trackByFaq; let i = index"
-              class="faq-item"
-            >
-              <button class="faq-question" type="button" (click)="toggleFaq(i)">
-                <span>{{ item.question }}</span>
-                <span class="faq-icon">{{ openFaqIndex === i ? '−' : '+' }}</span>
-              </button>
-              <div class="faq-answer" *ngIf="openFaqIndex === i">
-                {{ item.answer }}
-              </div>
-            </div>
-          </div>
+    <section id="form-dang-ky" class="section">
+      <div class="container form-wrap">
+        <div class="section-head">
+          <span class="badge">Get Consultation</span>
+          <h2>Nhận tư vấn lộ trình phù hợp cho con</h2>
+          <p>Để lại thông tin để đội ngũ tư vấn liên hệ với bạn.</p>
         </div>
 
-        <div id="form-dang-ky" class="contact-shell">
-          <div class="contact-card">
-            <span class="section-tag light-tag">Get Consultation</span>
-            <h2>Nhận tư vấn lộ trình phù hợp cho con</h2>
-            <p>
-              Để lại thông tin để đội ngũ tư vấn liên hệ và gợi ý chương trình phù hợp theo độ tuổi,
-              tính cách và nhu cầu phát triển của trẻ.
-            </p>
-
-            <form class="premium-form">
-              <div class="form-grid">
-                <div class="form-group">
-                  <label>Họ và tên phụ huynh</label>
-                  <input type="text" placeholder="Nhập họ và tên" />
-                </div>
-
-                <div class="form-group">
-                  <label>Số điện thoại</label>
-                  <input type="tel" placeholder="Nhập số điện thoại" />
-                </div>
-
-                <div class="form-group">
-                  <label>Khối lớp của con</label>
-                  <select>
-                    <option>Chọn khối lớp</option>
-                    <option *ngFor="let item of navGrades; trackBy: trackByGrade">
-                      {{ item.name }}
-                    </option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label>Email</label>
-                  <input type="email" placeholder="Nhập email" />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label>Nhu cầu của phụ huynh</label>
-                <textarea
-                  rows="4"
-                  placeholder="Ví dụ: Con hơi nhút nhát, cần tăng tự tin và kỹ năng giao tiếp..."
-                ></textarea>
-              </div>
-
-              <div class="form-actions">
-                <button type="submit" class="btn btn-light form-submit">Gửi đăng ký tư vấn</button>
-                <span class="form-note">Chúng tôi sẽ liên hệ trong thời gian sớm nhất.</span>
-              </div>
-            </form>
+        <form class="contact-form">
+          <div class="form-grid">
+            <input type="text" placeholder="Họ và tên phụ huynh" />
+            <input type="tel" placeholder="Số điện thoại" />
+            <select>
+              <option>Chọn khối lớp</option>
+              <option *ngFor="let item of programs">{{ item.name }}</option>
+            </select>
+            <input type="email" placeholder="Email" />
           </div>
-        </div>
+
+          <textarea rows="5" placeholder="Nhu cầu của phụ huynh..."></textarea>
+
+          <button type="submit" class="btn btn-primary">Gửi đăng ký tư vấn</button>
+        </form>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Kỹ Năng Sống Kids</h3>
-        <p>Chương trình kỹ năng sống và thái độ dành cho học sinh tiểu học.</p>
-      </div>
-
-      <div>
-        <h4>Điều hướng</h4>
-        <ul>
-          <li><a href="#gioi-thieu">Giới thiệu</a></li>
-          <li><a href="#chuong-trinh">Chương trình</a></li>
-          <li><a href="#phuong-phap">Phương pháp</a></li>
-          <li><a href="#hoc-phi">Học phí</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Liên hệ</h4>
-        <ul>
-          <li>Email: info@kynangsongkids.vn</li>
-          <li>Hotline: 0900 123 456</li>
-          <li>Facebook / Zalo / YouTube</li>
-        </ul>
-      </div>
-    </div>
-  </footer>
 
   <button class="back-to-top" (click)="scrollToTop()" [class.show]="showScrollTop">
     ↑
